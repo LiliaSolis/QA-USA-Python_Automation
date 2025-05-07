@@ -45,7 +45,3 @@ class TestUrbanRoutes:
         pass  # Placeholder for future implementation
 
 
-        if check.hostname == "x":
-            return True
-        else:
-            return False
