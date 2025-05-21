@@ -1,21 +1,15 @@
 import data
 import helpers
-from helpers import is_url_rea
-from selenium import webdriver
-import time
-from urban_route_main_page import UrbanRoutesPage
+from helpers import is_url_reachable
+
 
 class TestUrbanRoutes:
     @classmethod
     def setup_class(cls):
-        if is_url_reachable == "https://cnt-8bc31ae9-a7ba-4a3b-b6e0-3b13389243eb.containerhub.tripleten-services.com/"
+        if is_url_reachable == "URBAN_ROUTES_URL"
             return print("Connected to the Urban Routes server")
         else:
             return print("Cannot connect to Urban Routes. Check the server is on and still running")
-    from selenium.webdriver import DesiredCapabilities
-    capabilities = DesiredCapabilities.CHROME
-    capabilities["goog:loggingPrefs"] = {'performance': 'ALL'}
-    cls.driver = webdriver.Chrome()
 
     def test_set_route(self):  # Add in S8
         print("function created for set route")
@@ -50,6 +44,8 @@ class TestUrbanRoutes:
         print()
         pass  # Placeholder for future implementation
 
-    @classmethod
-    def teardown_class(cls):
-        cls.driver.quit()
+
+        if check.hostname == "x":
+            return True
+        else:
+            return False
