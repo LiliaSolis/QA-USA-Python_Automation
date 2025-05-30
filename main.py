@@ -1,5 +1,5 @@
 from time import sleep
-
+from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
 import data
 import helpers
@@ -85,25 +85,6 @@ class TestUrbanRoutes:
         self.driver.get(data.URBAN_ROUTES_URL)
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.set_route(data.ADDRESS_FROM, data.ADDRESS_TO)
-        routes_page.click_supportive_plan()
-        routes_page.click_phone_number_button()
-        routes_page.set_phone_number(data.PHONE_NUMBER)
-        routes_page.click_next_button()
-        routes_page.set_phone_number_code(helpers.retrieve_phone_code(self.driver))
-        routes_page.click_confirm_button()
-        routes_page.click_payment_method_button()
-        routes_page.click_add_card_button()
-        routes_page.set_card_number(data.CARD_NUMBER)
-        routes_page.set_code_field(data.CARD_CODE)
-        routes_page.click_link_button()
-        routes_page.set_message_to_the_driver(data.MESSAGE_FOR_DRIVER)
-        routes_page.get_blanket_and_handkerchiefs()
-        routes_page.click_order_2_ice_creams()
-        sleep(5)
-        for order in range(2):
-            sleep(5)
-            print(order)
-        sleep(5)
         routes_page.click_enter_the_number_and_order()
 
     @classmethod
