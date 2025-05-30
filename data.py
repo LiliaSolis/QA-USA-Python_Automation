@@ -1,5 +1,5 @@
 # File with constants
-URBAN_ROUTES_URL = "https://cnt-ce1912b1-606a-4c0c-b821-4c2399332a8d.containerhub.tripleten-services.com/"
+URBAN_ROUTES_URL = "https://cnt-c96a0374-04cc-4edb-a3ee-e17c0333db4b.containerhub.tripleten-services.com/"
 ADDRESS_FROM = 'East 2nd Street, 601'
 ADDRESS_TO = '1300 1st St'
 PHONE_NUMBER = '+1 123 123 12 12'
