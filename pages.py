@@ -13,6 +13,7 @@ class UrbanRoutesPage:
     to_field = (By.ID, 'to')
     supportive_plan_card = (By.XPATH, '//*[@id="root"]/div/div[3]/div[3]/div[2]/div[1]/div[5]/div[2]')
     #supportive_plan_card_parent = (By.XPATH, '//div[contains(text(), "Supportive")]//')
+    supportive_plan_checked = (By.XPATH, '/html/body/div/div/div[3]/div[3]/div[2]/div[1]/div[5]/div[2]')
     active_plan_card = (By.XPATH, '//div[@class="card active"]//div[@class="card-title"]')
     #call_taxi_button = (By.XPATH, '//button[contains(text(), "Call a taxi")]')
     call_taxi_button = (By.XPATH, '//*[@id="root"]/div/div[3]/div[3]/div[1]/div[3]/div[1]/button')
@@ -65,6 +66,9 @@ class UrbanRoutesPage:
 
     def click_supportive_plan(self):
         self.driver.find_element(*self.supportive_plan_card).click()
+
+    def get_supportive_plan(self):
+        return self.driver.find_element(*self.supportive_plan_checked).get_property('checked')
 
     def is_supportive_plan_selected(self):
         supportive_plan = self.driver.find_element(*self.supportive_plan_card)
