@@ -1,7 +1,8 @@
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait
 from data import MESSAGE_FOR_DRIVER, CARD_NUMBER, PHONE_NUMBER, CARD_CODE
 from helpers import retrieve_phone_code
 import time
